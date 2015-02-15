@@ -1,0 +1,15 @@
+doctype html
+html ng-app="homeBank"
+  head
+    title HomeBank
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag "//code.angularjs.org/1.2.16/angular-cookies.min.js"
+    = javascript_include_tag "//cdn.auth0.com/js/lock-7.0.min.js"
+    = javascript_include_tag "//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"
+    = javascript_include_tag "//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"
+    = javascript_include_tag "//cdn.auth0.com/w2/auth0-angular-4.js"
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    = csrf_meta_tags
+  body
+    = yield
